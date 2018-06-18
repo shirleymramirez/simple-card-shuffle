@@ -1,26 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Simple-Card-Shuffle</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Cards</title>
+    <link rel="stylesheet" href="./assets/css/app.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Simple Card Shuffle</h1>
-        </header>
-    </div>
-    <div class="row">
-        <div class="cardDeck"></div>
-    </div>
+    <header>
+        Playing With Cards
+    </header>
+    <section id="content">
+        <aside>
+            <h3>Deck</h3>
+            <label>Type</label>
+            <select name="deckType" id="deckType" size="1">
+                <option value="standard">Standard</option>
+                <option value="pinochle">Pinochle</option>
+            </select>
+            <br />
+            <br />
+            <button id="shuffleButton">Shuffle</button>
+            <br />
+            <button id="cutButton">Cut</button>
+            <br />
+            <button id="dealButton">Deal</button>
+            <br />
+            <button id="sortButton">Sort Remaining</button>
+            <br />
+        </aside>
+        <section class='board'>
+            <div id="deck">
+                <div class="card back">
+                </div>
+                <div class='stats'>
+                    <label># left in deck</label>
+                    <span id="leftInDeck">52</span>
+                </div>
+            </div>
+            <div id="discard">
+                <div class="card face">
+                    <div>
+                        <span class="value">King of Clubs</span>
+                    </div>
+                </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./assets/javascript/app.js"></script>
+            </div>
+        </section>
+    </section>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./assets/javascript/cardGame.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./assets/javascript/app.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
